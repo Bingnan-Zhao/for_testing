@@ -84,3 +84,5 @@ def simulate_rooms(rooms, central_ac_PID, hum_PID, vent_PID, time_steps=1000, dt
             room.hum += (-(room.hum - H_env) / room.tau_H + room.K_H * room.fan_power + humidity_gain) * dt
 
             room.CO2 += (CO2_gain - room.K_V * vent_power) * dt
+
+            
