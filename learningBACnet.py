@@ -4,7 +4,7 @@ import asyncio
 import random
 
 print(inspect.signature(BAC0.core.devices.Device.Device))
-
+a =111
 
 
 async def simulate_temperature(device):
