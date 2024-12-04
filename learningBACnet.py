@@ -6,6 +6,7 @@ import random
 #print(inspect.signature(BAC0.core.devices.Device.Device))
 
 
+
 async def simulate_temperature(device):
     """
     模拟温度传感器，定期更新温度值。
@@ -22,7 +23,7 @@ async def main():
     print("BACnet client started on localhost.")
 
     # 模拟设备：温度传感器
-    temp_sensor = await BAC0.device(
+    temp_sensor =  BAC0.device(        #await
         address="127.0.0.1",  # 必需参数
         device_id=12345,      # 必需参数
         network=None,         # 通常为 None
