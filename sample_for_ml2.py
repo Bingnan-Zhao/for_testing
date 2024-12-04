@@ -44,7 +44,7 @@ class SimpleHVACEnv(gym.Env):
         self.co2 += np.random.normal(0, 10)  # 模拟CO₂浓度的随机波动
 
         # 计算奖励
-        reward = - ( abs(self.co2 - 400) / 20 + vent_opening * 1) #abs(self.temp - 22) + abs(self.humidity - 50) / 10 +cooling_power + humidifier_power +
+        reward = - ( abs(self.co2 - 400) / 20 + vent_opening * 0.7) #abs(self.temp - 22) + abs(self.humidity - 50) / 10 +cooling_power + humidifier_power +
         
         # 定义结束条件，如果温度或CO₂超出范围
         done = bool(self.co2 < 300 or self.co2 > 600)
